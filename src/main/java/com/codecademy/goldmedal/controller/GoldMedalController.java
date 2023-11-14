@@ -1,5 +1,7 @@
 package com.codecademy.goldmedal.controller;
 
+import com.codecademy.goldmedal.data.CountryRepository;
+import com.codecademy.goldmedal.data.GoldMedalRepository;
 import com.codecademy.goldmedal.model.*;
 import org.apache.commons.text.WordUtils;
 import org.springframework.web.bind.annotation.*;
@@ -11,10 +13,13 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/countries")
 public class GoldMedalController {
-    // TODO: declare references to your repositories
 
-    // TODO: update your constructor to include your repositories
-    public GoldMedalController() {
+    private final CountryRepository countryRepository;
+    private final GoldMedalRepository goldMedalRepository;
+
+    public GoldMedalController(final CountryRepository countryRepository, final GoldMedalRepository goldMedalRepository) {
+        this.countryRepository = countryRepository;
+        this.goldMedalRepository = goldMedalRepository;
     }
 
     @GetMapping

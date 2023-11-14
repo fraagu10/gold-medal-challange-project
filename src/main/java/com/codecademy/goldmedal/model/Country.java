@@ -1,19 +1,21 @@
 package com.codecademy.goldmedal.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
+@Table(name = "country")
 public class Country {
     @Id
     @GeneratedValue
     private Long id;
-
+    @Column(name = "name")
     private String name;
+    @Column(name = "code")
     private String code;
+    @Column(name = "gdp")
     private BigDecimal gdp;
+    @Column(name = "population")
     private Integer population;
 
     public Country() {
