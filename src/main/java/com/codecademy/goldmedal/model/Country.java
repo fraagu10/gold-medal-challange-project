@@ -36,7 +36,7 @@ public class Country {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {
@@ -44,7 +44,7 @@ public class Country {
     }
 
     public String getCode() {
-        return code;
+        return this.code;
     }
 
     public void setCode(String code) {
@@ -52,7 +52,7 @@ public class Country {
     }
 
     public BigDecimal getGdp() {
-        return gdp;
+        return this.gdp;
     }
 
     public void setGdp(BigDecimal gdp) {
@@ -60,7 +60,7 @@ public class Country {
     }
 
     public Integer getPopulation() {
-        return population;
+        return this.population;
     }
 
     public void setPopulation(Integer population) {
