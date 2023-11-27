@@ -68,7 +68,7 @@ public class GoldMedalController {
     }
 
      private CountryDetailsResponse getCountryDetailsResponse(String countryName) {
-         var countryOptional = this.goldMedalRepository.findByName(countryName);
+         var countryOptional = this.countryRepository.findByName(countryName);
          if (countryOptional.isEmpty()) {
              return new CountryDetailsResponse(countryName);
          }
